@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3cdde3fbeb03f42a2fdfe4ace79488, type: 3}
+  m_Name: Growler
+  m_EditorClassIdentifier: 
+  enemyName: Growler
+  prefab: {fileID: 4284469112218657678, guid: f261395a96f92df4581fa7e7c1e3782f, type: 3}
+  maxHealth: 10
+  knockbackRegist: 1
+  damage: 1
+  attackDelay: 1
+  attackRange: 0.6
+  chaseRange: 6
