@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c78a1de571023b4f9be10b686d30ed6, type: 3}
   m_Name: HealthPack
   m_EditorClassIdentifier: 
-  rate: 0
+  rate: 0.2
   itemPrefab: {fileID: 1703095321148777992, guid: 85dde6ce8c12f094485afbdaed99f6a3, type: 3}
-  resourceType: 1
+  _resourceType: 1
   minAmount: 1
   maxAmount: 1
   useSound: {fileID: 8300000, guid: d8afd615e04e4c04c8fa3b8969d0abfc, type: 3}

@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
 
     #region AMMO ���� �ڵ�
     public UnityEvent<int> OnAmmoChange; // �Ѿ� ����� �߻��� �̺�Ʈ
-    [SerializeField] protected int _ammo; // ���� �Ѿ� ��
+    public int _ammo; 
 
     public int Ammo
     {

@@ -1,8 +1,10 @@
 using UnityEngine;
 using Cinemachine;
+using TMPro;
 
 public class Define
 {
+
     private static Camera _mainCam = null;
     public static Camera MainCam
     {

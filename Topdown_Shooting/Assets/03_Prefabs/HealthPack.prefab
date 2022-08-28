@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4977975503001687502}
   - component: {fileID: 3195530832268782467}
   - component: {fileID: 7393383462898725413}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HealthPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

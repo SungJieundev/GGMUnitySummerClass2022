@@ -1,14 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance = null;
 
+    
+    public GameObject _gameOverPanel;
+    public TextMeshProUGUI _scoreText;
+    
     [SerializeField]
     private Transform _player;
     public Transform Player { get => _player; }
+
+    public int _score = 0;
 
     [SerializeField]
     private PoolingListSO _poolingList = null;
@@ -60,11 +70,18 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float _generateMinTime = 4f, _generateMaxTime = 8f;
     
-
+    private void Update() {
+       _scoreText.text = "Score : " + _score; 
+    }
 
     private void Start()
     {
         StartCoroutine(GameLoop());
+    }
+
+    public void GameRestart() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator GameLoop()

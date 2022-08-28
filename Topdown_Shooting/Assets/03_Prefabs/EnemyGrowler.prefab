@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686152573293253101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.044103, y: 1.9866105, z: -0.40257603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4284469112218657679}
@@ -47,7 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ecccb3e9a1d35fd40a7ca413165fa592, type: 2}
   - {fileID: 11400000, guid: 760884801c12a6340b55052aa3bfa7b5, type: 2}
   _dropPower: 2
-  _dropChance: 0
+  _dropChance: 0.3
 --- !u!1 &4284469111738725856
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyData: {fileID: 11400000, guid: 39175b22d28676a4c8725b1a4ab6173e, type: 2}
-  <Heath>k__BackingField: 0
+  <Health>k__BackingField: 0
   <OnDie>k__BackingField:
     m_PersistentCalls:
       m_Calls:
@@ -731,6 +731,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4284469113340178852}
         m_TargetAssemblyTypeName: EnemyAnimation, Assembly-CSharp
         m_MethodName: PlayDeadAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6171009235999758409}
+        m_TargetAssemblyTypeName: ItemDropper, Assembly-CSharp
+        m_MethodName: Drop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1199,7 +1211,7 @@ MonoBehaviour:
   - {x: -0.10288763, y: 0.08162379, z: 0}
   m_ShapePathHash: 629766527
   m_Mesh: {fileID: 0}
-  m_InstanceId: 36190
+  m_InstanceId: 33630
 --- !u!114 &4284469113340178852
 MonoBehaviour:
   m_ObjectHideFlags: 0

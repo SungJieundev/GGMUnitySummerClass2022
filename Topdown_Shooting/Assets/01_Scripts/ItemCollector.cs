@@ -6,32 +6,39 @@ public class ItemCollector : MonoBehaviour
 {
     private int _resourceLayer;
     private Player _player;
+    private Weapon _weapon;
 
     private void Awake()
     {
         _resourceLayer = LayerMask.NameToLayer("Resource");
         _player = GetComponent<Player>();
+        _weapon = transform.Find("WeaponParent").GetComponentInChildren<Weapon>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == _resourceLayer)
+        if (collision.gameObject.layer == _resourceLayer)
         {
             Resource resource = collision.gameObject.GetComponent<Resource>();
 
-            if(resource != null)
+            if (resource != null)
             {
-                switch(resource.ResourceData.resourceType)
+                switch (resource.ResourceData._resourceType)
                 {
                     case ResourceType.Ammo:
-                        //�̰� �ϳװ� �� ����� �˴ϴ�.
+                        int ammoValue = resource.ResourceData.GetAmount();
+                        _weapon.Ammo += ammoValue;
+                        PopupText(ammoValue, resource);
+                        resource.PickUpResource();
+                        Debug.Log("총알");
                         break;
+
                     case ResourceType.Health:
                         int value = resource.ResourceData.GetAmount();
                         _player.Health += value;
-                        //�˾��ؽ�Ʈ ����ٲ���
                         PopupText(value, resource);
                         resource.PickUpResource();
+                        Debug.Log("힐");
                         break;
                 }
             }

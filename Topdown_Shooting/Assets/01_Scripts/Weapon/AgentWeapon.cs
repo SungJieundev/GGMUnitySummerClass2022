@@ -12,8 +12,7 @@ public class AgentWeapon : MonoBehaviour
     protected float _desireAngle; //���Ⱑ �ٶ󺸰��� �ϴ� ����
 
 
-    [SerializeField]
-    private int _maxTotalAmmo = 2000, _totalAmmo = 200; //200 / 2000 �� ������
+    public int _maxTotalAmmo = 2000, _totalAmmo = 200; //200 / 2000 �� ������
     protected bool _isReloading = false;
     public bool IsReloading { get => _isReloading; }
     private ReloadGaugeUI _reloadUI = null;

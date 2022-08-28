@@ -33,6 +33,7 @@ public class Enemy : PoolableMono, IHittable, IAgent
     protected SpriteRenderer _spriteRenderer = null;
     protected AgentMovement _agentMovement = null;
 
+
     protected virtual void Awake()
     {
         _brain = GetComponent<EnemyAIBrain>();
@@ -132,6 +133,7 @@ public class Enemy : PoolableMono, IHittable, IAgent
     {
         Health = 0;
         _isDead = true;
+        GameManager.Instance._score++;
         OnDie?.Invoke();
     }
 

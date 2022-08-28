@@ -18,7 +18,7 @@ public class Resource : PoolableMono
         _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    public void PickUpResource() //���ҽ� ������ �� ������ �ż���
+    public void PickUpResource() 
     {
         StartCoroutine(DestroyCoroutine());
     }

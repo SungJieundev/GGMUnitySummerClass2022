@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rate: 0.3
   itemPrefab: {fileID: 2061249227663452457, guid: 5443258bf54d77447952b6bce4e92f3e, type: 3}
-  resourceType: 2
+  _resourceType: 2
   minAmount: 20
   maxAmount: 40
   useSound: {fileID: 8300000, guid: 903fa03eb6bb0ad48a0dfb3e1b7e0e7a, type: 3}
