@@ -39,18 +39,29 @@ public class Player : MonoBehaviour, IHittable, IAgent
         Health = _maxHealth;
     }
 
+    private void Update()
+    {
+        if (_isDead == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            GameManager.Instance.GameRestart();
+            _isDead = false;
+            
+        }
+    }
+
     public void GetHit(int damage, GameObject damageDealer)
     {
         if (_isDead) return;
         Health -= damage;
         OnUpdateHealthUI?.Invoke(Health);
         OnGetHit?.Invoke();
-        if(Health <= 0)
+        if (Health <= 0)
         {
             OnDie?.Invoke();
             _isDead = true;
-            
+
             GameOverPanel.Instance.GameOver();
+
         }
     }
 

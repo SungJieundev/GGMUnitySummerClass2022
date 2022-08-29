@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     
-    public GameObject _gameOverPanel;
-    public TextMeshProUGUI _scoreText;
     
     [SerializeField]
     private Transform _player;
@@ -69,10 +67,7 @@ public class GameManager : MonoBehaviour
     private int _spawnCount = 3;
     [SerializeField]
     private float _generateMinTime = 4f, _generateMaxTime = 8f;
-    
-    private void Update() {
-       _scoreText.text = "Score : " + _score; 
-    }
+
 
     private void Start()
     {

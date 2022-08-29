@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameOverPanel : MonoBehaviour
 {   
 
      public static GameOverPanel Instance = null;
+
+
+    public GameObject _gameOverPanel;
+
+    public TextMeshProUGUI _scoreText;
 
     private void Awake() {
         if(Instance != null)
@@ -20,11 +26,8 @@ public class GameOverPanel : MonoBehaviour
 
         Time.timeScale = 0;
 
-        GameManager.Instance._gameOverPanel.SetActive(true);
+        _gameOverPanel.SetActive(true);
+        _scoreText.text = "Score : " + GameManager.Instance._score;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameManager.Instance.GameRestart();
-        }
     }
 }

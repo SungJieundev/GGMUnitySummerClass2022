@@ -65,6 +65,10 @@ public class Spawner : PoolableMono
                 PoolManager.Instance.Push(this);
             });
     }
+    public override void Init()
+    {
+        //Do nothing
+    }
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()
@@ -77,9 +81,5 @@ public class Spawner : PoolableMono
         }
     }
 
-    public override void Init()
-    {
-        //Do nothing
-    }
 #endif
 }
