@@ -23,10 +23,10 @@ public class AgentMovement : MonoBehaviour
 
     public void MoveAgent(Vector2 moveInput)
     {
-        //�̰� Ű�� ���ȴ�
+        
         if(moveInput.sqrMagnitude > 0)
         {
-            //���� ����, ����
+            
             if(Vector2.Dot(moveInput, _movementDirection) < 0)
             {
                 _currentVelocity = 0;
