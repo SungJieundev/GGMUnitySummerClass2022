@@ -18,8 +18,6 @@ public class BulletSpawner : MonoBehaviour
         spawnRate = Random.Range(spawnRateMin, spawnRateMax);
         target = FindObjectOfType<PlayerController>().transform;
     }
-
-    // Update is called once per frame
     void Update()
     {
         timeAfterSpawn += Time.deltaTime;

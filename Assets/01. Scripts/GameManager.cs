@@ -17,8 +17,7 @@ public class GameManager : MonoBehaviour
         surviveTime = 0;
         isGameover = false;
     }
-
-    
+  
     void Update()
     {
         if(!isGameover)

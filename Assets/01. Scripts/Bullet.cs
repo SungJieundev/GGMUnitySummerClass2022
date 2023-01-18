@@ -15,11 +15,6 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, 3f);
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other) 
     {
         if(other.tag == "Player")
